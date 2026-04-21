@@ -3,11 +3,19 @@
   --progress-bg: #e5e7eb;
   --progress-fill: #4f46e5;
   --progress-radius: 999px;
+  --base-bg: #141e35;
+  --button-bg: #1b1127;
+  --text: #f8fafc;
 }
 
+
 body {
-  font-family: sans-serif;
-  padding: 2rem;
+  margin: 40vh;
+  min-height: 100vh;
+  display: flexbox;
+  place-items: center;
+  background: var(--base-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .progress {
@@ -15,7 +23,7 @@ body {
   background: var(--progress-bg);
   border-radius: var(--progress-radius);
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .progress__bar {
@@ -38,16 +46,26 @@ body {
 }
 
 button {
-  margin-right: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 14px 34px;
+  margin: 10px;
   border: none;
-  background: #4f46e5;
-  color: white;
-  border-radius: 6px;
+  border-radius: 999px;
+  background: var(--button-bg);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   cursor: pointer;
-  font-weight: 600;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.2);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 button:hover {
-  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 18px rgba(34, 211, 238, 0.75),
+    0 0 36px rgba(168, 85, 247, 0.65),
+    0 0 52px rgba(251, 113, 133, 0.35);
 }
